@@ -9,7 +9,7 @@ using la_mia_pizzeria_static.Data;
 
 namespace lamiapizzeriastatic.Migrations
 {
-    [DbContext(typeof(PizzaeriaDbContext))]
+    [DbContext(typeof(PizzeriaDbContext))]
     partial class PizzaeriaDbContextModelSnapshot : ModelSnapshot
     {
         protected override void BuildModel(ModelBuilder modelBuilder)

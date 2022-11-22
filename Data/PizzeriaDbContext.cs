@@ -3,7 +3,7 @@ using Microsoft.EntityFrameworkCore;
 
 namespace la_mia_pizzeria_static.Data
 {
-    public class PizzaeriaDbContext : DbContext
+    public class PizzeriaDbContext : DbContext
     {
         public DbSet<Pizza> Pizze { get; set; }
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
