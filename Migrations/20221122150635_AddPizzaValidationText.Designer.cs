@@ -2,6 +2,7 @@
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using la_mia_pizzeria_static.Data;
 
@@ -10,9 +11,11 @@ using la_mia_pizzeria_static.Data;
 namespace lamiapizzeriastatic.Migrations
 {
     [DbContext(typeof(PizzeriaDbContext))]
-    partial class PizzaeriaDbContextModelSnapshot : ModelSnapshot
+    [Migration("20221122150635_AddPizzaValidationText")]
+    partial class AddPizzaValidationText
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -31,7 +34,7 @@ namespace lamiapizzeriastatic.Migrations
 
                     b.Property<string>("Description")
                         .IsRequired()
-                        .HasMaxLength(70)
+                        .HasMaxLength(40)
                         .HasColumnType("Text");
 
                     b.Property<string>("Image")
